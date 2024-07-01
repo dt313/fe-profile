@@ -1,0 +1,95 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    padding: 0 48px;
+}
+
+.text-wrap {
+    flex: 1;
+    margin-right: 100px;
+    .title {
+        width: 300px;
+        text-transform: uppercase;
+        font-size: 5rem;
+        line-height: 1.2;
+    }
+
+    .description {
+        max-width: 500px;
+        width: 100%;
+        margin-top: 24px;
+        font-size: 1.6rem;
+        color: var(--light-slate-grey);
+        word-spacing: 1px;
+        letter-spacing: 1px;
+    }
+}
+
+.tech-list {
+    flex: 1;
+}
+
+.tech-item {
+    display: flex;
+    height: 11.9vh;
+    border-top: 1px solid var(--slight-black);
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.item-logo {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 24px;
+}
+
+.item-title {
+    font-weight: 200;
+    font-size: 2.6rem;
+    word-wrap: wrap;
+}
+
+.item-tag {
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 996px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .text-wrap .title {
+        font-size: 7rem;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .text-wrap .description {
+        max-width: 700px;
+    }
+    .tech-list {
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 698px) {
+    .wrapper {
+        padding: 24px;
+    }
+
+    .text-wrap .title {
+        font-size: 5rem;
+        width: 300px;
+    }
+
+    .item-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .item-title {
+        font-size: 2rem;
+    }
+}

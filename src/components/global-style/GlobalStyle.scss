@@ -1,0 +1,49 @@
+@import 'normalize.css';
+
+:root {
+    --system-ui-font: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    --text-color: #fbf3f3;
+    --black: #050a18;
+    --white-smoke: #f2f2f2;
+    --light-slate-grey: #747083;
+    --slight-black: #1e2435;
+    --medium-purple: #9d84ff;
+    --white: white;
+    --royal-blue: #4b6bdd;
+    --black-black: black;
+    --midnight-blue: #0a0834;
+    --lavender: #e3ecff;
+    --hover-blue: #0d1429;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--system-ui-font);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+    background-color: var(--black);
+    color: var(--text-color);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}

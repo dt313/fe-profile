@@ -1,0 +1,148 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+}
+
+.left {
+    flex: 66.66%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    flex: 33.33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumnail-ss {
+    width: 100%;
+    height: 56vh;
+    .avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about-ss {
+    width: 100%;
+    height: 32vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    &:hover .icon {
+        transform: rotate(35deg);
+    }
+    .title {
+        font-size: 4rem;
+        margin-right: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .plus .icon {
+        width: 10rem;
+        height: 10rem;
+        font-weight: bold;
+        float: right;
+    }
+}
+
+.contact-ss {
+    width: 100%;
+    height: 56vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+
+    .contact-text {
+        padding: 24px;
+        opacity: 0.7;
+        font-size: 1.7rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    cursor: pointer;
+    &:hover .hand .icon {
+        transform: rotate(40deg);
+    }
+
+    .hand {
+        margin-left: 24px;
+    }
+
+    .hand .icon {
+        width: 4rem;
+    }
+}
+.work-ss {
+    width: 100%;
+    height: 32vh;
+    padding: 0 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--slight-black);
+    border-left: 1px solid var(--slight-black);
+    cursor: pointer;
+
+    &:hover .arrow {
+        transform: translateX(40%);
+    }
+
+    .title {
+        font-size: 3rem;
+        margin-right: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .arrow .icon {
+        width: 4rem;
+    }
+}
+
+@media (max-width: 996px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .work-ss,
+    .about-ss,
+    .contact-ss {
+        height: 20vh;
+    }
+
+    .contact-ss {
+        height: auto;
+        border-top: 1px solid var(--slight-black);
+    }
+    .about-ss {
+        justify-content: space-around;
+    }
+
+    .work-ss {
+        justify-content: space-between;
+        border-left: none;
+
+        .arrow {
+            float: right;
+        }
+    }
+}
+
+@media (max-width: 698px) {
+    .work-ss,
+    .about-ss,
+    .contact-ss {
+        padding: 12px;
+    }
+    .contact-ss .contact-text {
+        padding: 0;
+    }
+
+    .contact-ss .hand {
+        margin: 0;
+    }
+}
