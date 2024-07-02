@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { NavLink } from 'react-router-dom';
-import { FaGithubAlt, FaFacebookF } from 'react-icons/fa';
+import { FaGithubAlt } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { useState } from 'react';
 const cx = classNames.bind(styles);

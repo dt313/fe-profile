@@ -49,7 +49,14 @@
     z-index: 1;
     width: 80rem;
     height: 80rem;
-    background-image: radial-gradient(circle farthest-corner at 40% 50%, var(--medium-purple), rgba(5, 10, 24, 0) 50%);
+    background-image: radial-gradient(
+        circle farthest-corner at 40% 50%,
+        var(--medium-purple),
+        #9d84ff 0%,
+        rgba(5, 10, 24, 0) 50%
+    );
+    opacity: 0.64;
+
     // filter: drop-shadow(5px 5px 10px #000000);
 }
 
@@ -86,6 +93,7 @@
 .final-section {
     margin-top: 100px;
     max-width: 1024px;
+
     width: 100%;
 }
 
@@ -112,7 +120,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     .footer-text {
         font-size: 1.4rem;
         color: var(--light-slate-grey);
