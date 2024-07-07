@@ -48,7 +48,7 @@ function About() {
             </div>
             <div className={cx('footer')}>
                 <span className={cx('footer-text')}> 2024@Danh Tuan</span>
-                <span className={cx('footer-text')}> Clone: https://www.dylanbrouwer.design/about </span>
+                <span className={cx('footer-text')}> Clone: https://www.dylanbrouwer.design </span>
             </div>
         </div>
     );

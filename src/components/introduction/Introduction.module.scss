@@ -12,6 +12,7 @@
     justify-content: center;
     flex-direction: column;
     align-self: flex-end;
+    z-index: 2;
 }
 
 .main-text {
@@ -19,6 +20,7 @@
     font-weight: 300;
     font-family: 'Courier New', Courier, monospace;
     margin-bottom: 32px;
+    z-index: 1;
 }
 
 .sub-text {

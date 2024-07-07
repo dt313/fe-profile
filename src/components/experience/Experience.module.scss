@@ -30,7 +30,7 @@
         align-items: center;
         border: 1px solid var(--slight-black);
         border-radius: 99999px;
-        cursor: pointer;
+        cursor: none;
         transition:
             translate 0.15s cubic-bezier(0.47, 0, 0.745, 0.715),
             background-color 0.2s,

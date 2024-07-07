@@ -36,6 +36,14 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
+
+    &:hover {
+        background-color: #1e243533;
+    }
+}
+
+.tech-item:last-child {
+    border-bottom: 1px solid var(--slight-black);
 }
 
 .item-logo {
@@ -52,7 +60,7 @@
 
 .item-tag {
     position: absolute;
-    right: 0;
+    right: 20px;
 }
 
 @media (max-width: 996px) {
@@ -91,5 +99,11 @@
 
     .item-title {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-wrap {
+        margin-right: 20px;
     }
 }

@@ -1,0 +1,160 @@
+@keyframes textFadeIn {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+.ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--white-smoke);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transition-duration: 100ms;
+    transition-duration: 100ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    will-change: width, height, transform, border;
+    z-index: 999;
+    pointer-events: none;
+    transition:
+        transform 0.4s ease-in-out,
+        width 0.4s ease-in,
+        height 0.4s ease-in;
+}
+
+.dot {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    background-color: var(--medium-purple);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+}
+
+.ring.none,
+.dot.none {
+    display: none;
+}
+
+.ring.large {
+    transform: scale(4);
+    background-color: #fff;
+    mix-blend-mode: difference;
+}
+
+.ring.drag {
+    width: 100px;
+    height: 100px;
+    background-color: #9d84ff44;
+    border: 1px solid rgba(157, 132, 255, 0.4);
+    pointer-events: none;
+
+    // position: relative;
+}
+
+.ring.drag::before {
+    content: 'Drag';
+    color: var(--medium-purple);
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.2rem;
+    transform: translate(-50%, -50%);
+    animation: textFadeIn 0.4s;
+}
+
+// About
+.ring.about {
+    width: 120px;
+    height: 120px;
+    background-color: #9d84ff44;
+    border: 1px solid rgba(157, 132, 255, 0.4);
+    pointer-events: none;
+
+    // position: relative;
+}
+
+.ring.about::before {
+    content: 'About';
+    color: var(--medium-purple);
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.4rem;
+    transform: translate(-50%, -50%);
+    animation: textFadeIn 0.4s;
+}
+
+// Contact
+.ring.contact {
+    width: 120px;
+    height: 120px;
+    background-color: #9d84ff44;
+    border: 1px solid rgba(157, 132, 255, 0.4);
+    pointer-events: none;
+
+    // position: relative;
+}
+
+.ring.contact::before {
+    content: 'Contact';
+    color: var(--medium-purple);
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.4rem;
+    transform: translate(-50%, -50%);
+    animation: textFadeIn 0.4s;
+}
+
+// Work
+.ring.work {
+    width: 120px;
+    height: 120px;
+    background-color: #9d84ff44;
+    border: 1px solid rgba(157, 132, 255, 0.4);
+    background-image: url('./../../assets/imgs/working_10295959.png');
+    background-size: 6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+// search
+.ring.search {
+    width: 120px;
+    height: 120px;
+    background-color: #9d84ff44;
+    border: 1px solid rgba(157, 132, 255, 0.4);
+    background-image: url('./../../assets/imgs/keyword_2112798.png');
+    background-size: 6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+// Mini-dot
+
+.ring.mini-dot {
+    display: none;
+}
+
+@media (max-width: 698px) {
+    .ring,
+    .dot {
+        display: none;
+    }
+}

@@ -4,17 +4,36 @@ import images from '@/assets/imgs';
 import Plus from '@/assets/icons/plus';
 import LeftArrow from '@/assets/icons/larrow';
 import RightArrow from '@/assets/icons/rarrow';
+import { useContext } from 'react';
+import { MouseContext } from '@/context/mouse-context';
 
 const cx = classNames.bind(styles);
 
 function Work() {
+    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
+    const handleClickWebsite = (e) => {
+        e.preventDefault();
+        console.log('CLick');
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('left')}>
                 <div className={cx('thumnail-ss')}>
-                    <img className={cx('thumnail')} src={images.avatar} />
+                    {/* <img className={cx('thumnail')} src={images.avatar} /> */}
+
+                    <iframe
+                        className={cx('thumnail')}
+                        onClick={handleClickWebsite}
+                        src="https://reactjs-blog-beta.vercel.app/"
+                        title="Blog"
+                    ></iframe>
                 </div>
-                <div className={cx('title-ss')}>
+                <div
+                    className={cx('title-ss')}
+                    onMouseEnter={() => cursorChangeHandler('search')}
+                    onMouseLeave={() => cursorChangeHandler('')}
+                >
                     <h2 className={cx('title')}>Personal Blog</h2>
                     <span className={cx('plus')}>
                         <Plus className={cx('icon')} />

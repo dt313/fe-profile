@@ -129,7 +129,8 @@
         border-top: 1px solid var(--slight-black);
     }
     .about-ss {
-        justify-content: space-around;
+        justify-content: space-between;
+        padding: 48px;
     }
 
     .work-ss {
@@ -138,6 +139,7 @@
 
         .arrow {
             float: right;
+            margin-right: 12px;
         }
     }
 }
@@ -149,10 +151,15 @@
         padding: 12px;
     }
     .contact-ss .contact-text {
-        padding: 0;
+        padding: 24px 0;
     }
 
     .contact-ss .hand {
         margin: 0;
+    }
+
+    .about-ss .plus .icon {
+        width: 7rem;
+        height: 7rem;
     }
 }

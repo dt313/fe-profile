@@ -69,4 +69,10 @@ const techList = [
         tag: 'Database',
     },
 ];
-export { skills, techList };
+
+const links = {
+    fb: 'https://www.facebook.com/profile.php?id=100015195702096',
+    gh: 'https://github.com/dt313',
+    blog: 'https://reactjs-blog-beta.vercel.app',
+};
+export { skills, techList, links };

@@ -1,5 +1,7 @@
 .wrapper {
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .body {
@@ -7,7 +9,7 @@
     padding: 80px;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    z-index: 2;
 }
 
 .footer {
@@ -21,6 +23,8 @@
     .footer-text {
         font-size: 1.4rem;
         color: var(--light-slate-grey);
+        text-align: center;
+        word-wrap: break-word;
     }
 }
 
@@ -74,7 +78,7 @@
     border: 1px solid #9d84ff66;
     position: relative;
     opacity: 0.7;
-    cursor: pointer;
+    cursor: none;
 
     &:hover {
         opacity: 1;
@@ -98,10 +102,56 @@
         rgba(5, 10, 24, 0) 50%
     );
     opacity: 0.6;
-
     width: 1000px;
     height: 1000px;
     position: absolute;
     top: -200px;
     right: -200px;
+    z-index: 1;
+}
+
+@media (max-width: 996px) {
+    .body {
+        padding: 40px 24px;
+    }
+
+    .gradient {
+        width: 80rem;
+        height: 80rem;
+    }
+}
+
+@media (max-width: 698px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .gradient {
+        top: 0;
+        width: 60rem;
+        height: 60rem;
+    }
+}
+@media (max-width: 480px) {
+    .body {
+        padding: 24px;
+    }
+
+    .large-text {
+        font-size: 6rem;
+        width: 100%;
+        max-width: none;
+    }
+
+    .email {
+        font-size: 1.8rem;
+    }
+    .gradient {
+        top: '';
+        bottom: 0;
+        width: 40rem;
+        height: 40rem;
+    }
 }
