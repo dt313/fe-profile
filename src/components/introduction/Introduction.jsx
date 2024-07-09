@@ -8,17 +8,18 @@ function Introduction({ className }) {
         <div className={cx('wrapper', className)}>
             <div className={cx('text-wrap')}>
                 <h3 className={cx('main-text')}>
-                    I’m a Digital Designer & No-code Developer based in Enschede, Netherlands. Creating digital
-                    experiences with an eye for design and motion.
+                    I am a fourth-year student at Soongsil University (SSU) in Seoul, South Korea's capital.
                 </h3>
                 <p className={cx('sub-text')}>
-                    Being creative with digital and motion design for websites is what I’ve been doing for the past 7+
-                    years. With just UI design I was not satisfied. Creating websites that are visually attractive
-                    through design and motion is what I love to do.
+                    I am passionate about technology with a strong enthusiasm for exploring the latest trends in this
+                    field. I am always eager and prepared to learn and apply new technologies in practice. Additionally,
+                    I enjoy sharing and exchanging knowledge with the community to collectively advance in our tech
+                    careers.
                 </p>
                 <p className={cx('sub-text')}>
-                    By embracing no-code tools like Webflow I'm not just the designer anymore. Now I can develop my own
-                    digital creations into an online experience, while having full control of design, motion and build.
+                    I am currently looking for a suitable job opportunity for beginners in the field of technology. I am
+                    enthusiastic and eager to learn in order to develop my skills and gain experience. I hope to join a
+                    dynamic work environment that offers opportunities to apply new knowledge in practice.
                 </p>
             </div>
             <div className={cx('image-wrap')}>

@@ -10,9 +10,9 @@ function Tech() {
             <div className={cx('text-wrap')}>
                 <h2 className={cx('title')}>MY DAILY PREFERRED TOOLS</h2>
                 <p className={cx('description')}>
-                    "There are many tools that can be used for design, animation and visual development. But these are
-                    the tools I prefer to use to build the best digital experiences. In my opinion tools are not
-                    permanent and I’ll be always trying out new stuff :)
+                    There are many tools that can be used for web development. But these are the tools I prefer to use
+                    to build the best web experiences. In my opinion, tools are not permanent, and I will always be
+                    trying out new stuff :)
                 </p>
             </div>
             <div className={cx('tech-list')}>

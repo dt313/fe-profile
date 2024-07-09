@@ -15,12 +15,14 @@ function Exprerience() {
 
     const handleClickLeftArrow = () => {
         const slider = sliderRef.current.container.current;
-        slider.scrollBy({ left: -500, behavior: 'smooth' });
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+        console.log(slider.scrollLeft);
     };
 
     const handleClickRightArrow = () => {
         const slider = sliderRef.current.container.current;
-        slider.scrollBy({ left: 500, behavior: 'smooth' });
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+        console.log(slider.scrollLeft);
     };
     return (
         <div className={cx('wrapper')}>

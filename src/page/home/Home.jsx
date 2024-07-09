@@ -63,9 +63,8 @@ function Home() {
                         <HandIcon className={cx('icon')} />
                     </span>
                     <p className={cx('contact-text')}>
-                        Hi, my name is Nguyen Danh Tuan. I am a skilled web developer specializing in ReactJS and
-                        NodeJS. I have extensive experience building dynamic, high-performance web applications and am
-                        passionate about creating seamless user experiences.
+                        I am a fourth-year student at Soongsil University (SSU) in Seoul, South Korea's capital. It's
+                        nice if we can cooperate together
                     </p>
                 </div>
                 <div

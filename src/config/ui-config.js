@@ -2,53 +2,22 @@ import images from '@/assets/imgs';
 
 const skills = [
     {
-        time: '2024-current',
-        title: 'reactjs',
-        tags: ['devoloper', 'digital design'],
-        description:
-            'Being creative with digital and motion design for websites is what I’ve been doing for the past 7+ years.',
+        time: 'feature',
+        title: 'unKnow',
+        tags: ['devoloper', 'Vietnam'],
+        description: 'Probably working at a certain company in Vietname or Remote devoloper',
     },
     {
-        time: '2019-2020',
-        title: 'Spring boot',
-        tags: ['devoloper', 'digital design'],
-        description:
-            'Being creative with digital and motion design for websites is what I’ve been doing for the past 7+ years.',
+        time: 'current-feature',
+        title: 'unKnow',
+        tags: ['devoloper', 'Korean'],
+        description: 'Probably working at a certain company in Korean or somewhere',
     },
     {
-        time: '2024-current',
-        title: 'reactjs',
-        tags: ['devoloper', 'digital design'],
-        description:
-            'Being creative with digital and motion design for websites is what I’ve been doing for the past 7+ years.',
-    },
-    {
-        time: '2024-current',
-        title: 'reactjs',
-        tags: ['devoloper', 'digital design'],
-        description:
-            'Being creative with digital and motion design for websites is what I’ve been doing for the past 7+ years.',
-    },
-    {
-        time: '2024-current',
-        title: 'reactjs',
-        tags: ['devoloper', 'digital design'],
-        description:
-            'Being creative with digital and motion design for websites is what I’ve been doing for the past 7+ years.',
-    },
-    {
-        time: '2024-current',
-        title: 'reactjs',
-        tags: ['devoloper', 'digital design'],
-        description:
-            'Being creative with digital and motion design for websites is what I’ve been doing for the past 7+ years.',
-    },
-    {
-        time: '2024-current',
-        title: 'reactjs',
-        tags: ['devoloper', 'digital design'],
-        description:
-            'Being creative with digital and motion design for websites is what I’ve been doing for the past 7+ years.',
+        time: '2021-current',
+        title: 'SSU Student',
+        tags: ['devoloper', 'university'],
+        description: '4 years for personal development, getting used to class exercises, practicing teamwork skills',
     },
 ];
 
@@ -59,14 +28,14 @@ const techList = [
         tag: 'Front-end',
     },
     {
-        logo: images.reactLogo,
+        logo: images.springLogo,
         title: 'Spring Boot',
-        tag: 'Backend Devoloper',
+        tag: 'Backend',
     },
     {
-        title: 'Database SQL',
-        logo: images.reactLogo,
-        tag: 'Database',
+        title: 'NodeJs',
+        logo: images.nodejsLogo,
+        tag: 'Backend',
     },
 ];
 
@@ -82,17 +51,16 @@ const projects = [
         title: 'Personal Blog',
         link: 'https://reactjs-blog-beta.vercel.app',
         description:
-            'Hi, my name is Nguyen Danh Tuan. I am a skilled web developer specializing in ReactJS and \
-                        NodeJS. I have extensive experience building dynamic, high-performance web applications and am \
-                        passionate about creating seamless user experiences.',
+            "Welcome to my blog! This is a space where I share stories, thoughts,\
+             and experiences about technology and programming. Let's explore and learn together through each post.Thank you so much for visiting!",
     },
     {
         title: 'Todo list app',
         link: 'https://todo-app-0003.netlify.app',
         description:
-            'Hi, my name is Nguyen Danh Tuan. I am a skilled web developer specializing in ReactJS and \
-                        NodeJS. I have extensive experience building dynamic, high-performance web applications and am \
-                        passionate about creating seamless user experiences.',
+            'Welcome to TodoApp! This is where you can efficiently manage and organize your tasks. \
+            With TodoApp, you can easily create, prioritize, and track your tasks from anywhere.\
+             Start organizing your life smarter and more effectively right now!',
     },
 ];
 export { skills, techList, links, projects };

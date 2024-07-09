@@ -47,7 +47,8 @@
 }
 
 .ring.large {
-    transform: scale(4);
+    width: 70px;
+    height: 70px;
     background-color: #fff;
     mix-blend-mode: difference;
 }
@@ -146,7 +147,7 @@
     display: none;
 }
 
-@media (max-width: 698px) {
+@media (max-width: 996px) {
     .ring,
     .dot {
         display: none;

@@ -59,7 +59,7 @@ function About() {
                         transition={{ duration: 1, delay: 0.6 }}
                         className={cx('large-text')}
                     >
-                        for design
+                        for web
                     </motion.h1>
                     <motion.h1
                         initial={{ y: '100px', opacity: 0 }}
@@ -67,7 +67,7 @@ function About() {
                         transition={{ duration: 1, delay: 0.9 }}
                         className={cx('large-text')}
                     >
-                        and motion
+                        devolopment
                     </motion.h1>
                 </div>
                 <div className={cx('object')}>
