@@ -2,14 +2,33 @@ import classNames from 'classnames/bind';
 import styles from './FinalSection.module.scss';
 import Setting from '@/assets/icons/setting';
 import AroundText from '../around-text/AroundText';
+import { useEffect, useRef } from 'react';
 
 const cx = classNames.bind(styles);
 
 function FinalSection() {
+    const settingRef = useRef();
+    useEffect(() => {
+        const handleScroll = () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollY = window.scrollY;
+            const scrollPercent = scrollY / (documentHeight - windowHeight);
+            const settingImg = settingRef.current;
+            const translatePercent = 100 - scrollPercent * 100 * 1.5;
+            settingImg.style.transform = `rotate(${translatePercent}deg)`;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('img-wrap')}>
-                <Setting className={cx('img')} />
+                <Setting className={cx('img')} ref={settingRef} />
             </div>
             <div className={cx('text-wrap')}>
                 <p className={cx('text')}>

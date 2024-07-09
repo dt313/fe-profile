@@ -17,6 +17,22 @@
     --hover-blue: #0d1429;
 }
 
+[data-theme='light'] {
+    --black: #e3ecff;
+    --slight-black: #1e243533;
+    --text-color: #0a0834;
+}
+
+@font-face {
+    font-family: Sequel;
+    src: url('../../assets/fonts/Sequel100Black-95.ttf');
+}
+
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url('../../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +44,7 @@ html {
 }
 
 body {
-    font-family: var(--system-ui-font);
+    font-family: SpaceGrotesk;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizespeed;

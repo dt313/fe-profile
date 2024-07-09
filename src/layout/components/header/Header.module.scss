@@ -9,6 +9,7 @@
     right: 0;
     background-color: var(--black);
     z-index: 10;
+    transition: background-color 0.5s;
 }
 
 .logo {
@@ -37,14 +38,16 @@
 
 .menu-link {
     text-align: center;
-    color: var(--white-smoke);
+    color: var(--light-slate-grey);
     font-size: 1.5rem;
     padding: 4px 8px;
     text-transform: uppercase;
     opacity: 0.7;
+    transition: all 0.3s;
 
     &:hover {
         opacity: 1;
+        color: var(--white-smoke);
     }
 }
 
@@ -87,12 +90,15 @@
     .icon {
         font-size: 2rem;
         opacity: 0.7;
+        color: var(--light-slate-grey);
+        z-index: 2;
+        transition: all 0.3s;
     }
 
     &:hover {
         .icon {
             opacity: 1;
-            z-index: 2;
+            color: var(--white-smoke);
         }
 
         &::before {
@@ -127,9 +133,12 @@
     font-size: 1.5rem;
     padding: 8px;
     opacity: 0.7;
+    color: var(--light-slate-grey);
+    transition: all 0.3s;
     cursor: pointer;
     &:hover {
         opacity: 1;
+        color: var(--white-smoke);
     }
 }
 
@@ -156,6 +165,7 @@
         z-index: 3;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
+        color: #747083;
 
         &:hover {
             .title {
@@ -178,11 +188,12 @@
         .title {
             margin-right: 12px;
             transition: all 0.3s ease-in-out;
+            font-size: 1.4rem;
         }
     }
 
     .menu-icon {
-        width: 1.7rem;
+        width: 1.4rem;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -193,7 +204,8 @@
         .below-line {
             width: 100%;
             height: 2px;
-            background-color: #fff;
+
+            background-color: #747083;
             margin: 2px 0;
             transition: all 0.3s ease-in;
         }
@@ -215,7 +227,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        transition: all 0.3s ease-out;
+        transition: all 0.5s ease-out;
 
         .mobi-link-list {
             display: flex;
@@ -225,13 +237,15 @@
 
         .mobi-menu-link {
             padding: 8px 24px;
-            font-size: 4rem;
-            font-family: fantasy;
-            font-weight: bold;
+            font-size: 3.2rem;
+            letter-spacing: 1px;
+            font-family: Sequel;
+            text-transform: uppercase;
+            transition: transform 0.3s;
         }
 
         .mobi-menu-link:hover {
-            font-size: 4.2rem;
+            transform: scale(1.1);
         }
 
         .mobi-menu-link.active {
@@ -279,6 +293,10 @@
 
     .logo {
         flex: 65%;
+    }
+
+    .logo-icon {
+        margin-left: 24px;
     }
 
     .icons {

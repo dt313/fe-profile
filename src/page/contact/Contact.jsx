@@ -7,7 +7,7 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { useContext } from 'react';
 import { MouseContext } from '@/context/mouse-context';
 import { links } from '@/config/ui-config';
-
+import { motion } from 'framer-motion';
 const cx = classNames.bind(styles);
 
 function Contact() {
@@ -16,13 +16,21 @@ function Contact() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('body')}>
-                <AroundText className={cx('title')} fontSize="1.2rem">
-                    contact
-                </AroundText>
-                <h1 className={cx('large-text')}>Get in touch</h1>
+                <div className={cx('noise')}></div>
+                <AroundText className={cx('title')}>contact</AroundText>
+                <motion.h1
+                    initial={{ y: '100px', opacity: 0 }}
+                    animate={{ y: '0', opacity: 1 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className={cx('large-text')}
+                >
+                    Get in touch
+                </motion.h1>
                 <div className={cx('email')}>
                     <GoArrowUpRight className={cx('right-arrow')} />
-                    <p className={cx('gmail')}>dt313.dev21@gmail.com</p>
+                    <a className={cx('gmail')} href={`mailto:${links.gmail}`}>
+                        {links.gmail}
+                    </a>
                 </div>
                 <div className={cx('icons')}>
                     <a
@@ -46,7 +54,7 @@ function Contact() {
             </div>
             <div className={cx('footer')}>
                 <span className={cx('footer-text')}>2024@Danh Tuan</span>
-                <span className={cx('footer-text')}>Clone by https://www.dylanbrouwer.design/contact</span>
+                <span className={cx('footer-text')}>Clone : dylanbrouwer.design</span>
             </div>
         </div>
     );

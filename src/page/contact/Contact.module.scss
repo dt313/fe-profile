@@ -8,8 +8,19 @@
     height: 76vh;
     padding: 80px;
     width: 100%;
-    position: relative;
-    z-index: 2;
+}
+
+.noise {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/imgs/noise.png');
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .footer {
@@ -30,37 +41,63 @@
 
 .title {
     font-size: 1.4rem;
+    position: relative;
+    z-index: 1;
 }
 
 .large-text {
-    max-width: 350px;
+    max-width: 700px;
     margin-top: 64px;
     margin-bottom: 24px;
-    font-size: 10rem;
     text-transform: uppercase;
     line-height: 1;
+    font-family: Sequel;
+    font-size: 10rem;
     letter-spacing: 2px;
     word-spacing: 2px;
+    position: relative;
+    z-index: 1;
 }
 
 .email {
-    display: flex;
+    display: inline-flex;
     justify-content: flex-start;
     align-items: center;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 24px;
     color: var(--medium-purple);
     font-family: 'Courier New', Courier, monospace;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
 
     &:hover .right-arrow {
         transform: rotate(45deg);
     }
 
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+
     .right-arrow {
         margin-right: 8px;
-        font-size: 2.6rem;
+        font-size: 2.2rem;
         transition: all 0.3s;
+    }
+
+    &::before {
+        content: '';
+        height: 1px;
+        width: 0px;
+        background-color: var(--medium-purple);
+        position: absolute;
+        bottom: -4px;
+        transition: width 0.3s;
+    }
+    .gmail {
+        color: var(--medium-purple);
     }
 }
 
@@ -78,6 +115,8 @@
     border: 1px solid #9d84ff66;
     position: relative;
     opacity: 0.7;
+    z-index: 2;
+
     cursor: none;
 
     &:hover {
@@ -101,23 +140,27 @@
         #9d84ff 0%,
         rgba(5, 10, 24, 0) 50%
     );
-    opacity: 0.6;
+    opacity: 0.64;
     width: 1000px;
     height: 1000px;
     position: absolute;
     top: -200px;
     right: -200px;
-    z-index: 1;
+    z-index: 0;
 }
 
 @media (max-width: 996px) {
     .body {
-        padding: 40px 24px;
+        padding: 64px 24px;
     }
 
     .gradient {
         width: 80rem;
         height: 80rem;
+    }
+
+    .email::before {
+        width: 100%;
     }
 }
 
@@ -133,14 +176,19 @@
         width: 60rem;
         height: 60rem;
     }
+
+    .large-text {
+        font-size: 8rem;
+    }
 }
 @media (max-width: 480px) {
     .body {
-        padding: 24px;
+        padding: 64px 24px;
     }
 
     .large-text {
-        font-size: 6rem;
+        font-size: 4.2rem;
+
         width: 100%;
         max-width: none;
     }
@@ -149,9 +197,9 @@
         font-size: 1.8rem;
     }
     .gradient {
-        top: '';
+        top: -100px;
         bottom: 0;
-        width: 40rem;
-        height: 40rem;
+        width: 50rem;
+        height: 50rem;
     }
 }

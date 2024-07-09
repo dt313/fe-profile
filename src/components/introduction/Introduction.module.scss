@@ -1,6 +1,7 @@
 .wrapper {
     display: flex;
     width: 100%;
+    --time: 15s;
 }
 
 .text-wrap {
@@ -16,9 +17,8 @@
 }
 
 .main-text {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 300;
-    font-family: 'Courier New', Courier, monospace;
     margin-bottom: 32px;
     z-index: 1;
 }
@@ -41,7 +41,7 @@
     height: 650px;
     border-top-left-radius: 1000rem;
     border-top-right-radius: 1000rem;
-    overflow: hidden;
+    // overflow: hidden;
     background-image: url('../../assets/imgs/avatar.jpeg');
     background-position: center;
     background-size: cover;
@@ -52,26 +52,81 @@
 .img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     z-index: 2;
 }
 
-.color {
-}
-
-.slide {
+.mask {
     position: absolute;
     width: 100%;
     bottom: 0;
     height: 50px;
-    background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(37, 174, 237, 0.2) 64%, var(--black));
     display: flex;
-    justify-content: center;
     align-items: center;
+    z-index: 2;
+    background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 0) 50%, var(--black));
+}
 
-    .name {
-        font-weight: bold;
+.marquee-w {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+.marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.marquee .scroll-text {
+    display: inline-block;
+    padding-left: 100%;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    font-size: 2rem;
+    font-family: Sequel;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee2 .scroll-text {
+    animation-delay: 15s;
+}
+
+.text {
+    padding: 0 24px;
+    position: relative;
+    color: #fff;
+}
+
+.text::before {
+    content: '';
+    height: 8px;
+    width: 8px;
+    border-radius: 999px;
+    background-color: var(--medium-purple);
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+// }
+
+@keyframes marquee {
+    0% {
+        transform: translate(20%, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
     }
 }
 

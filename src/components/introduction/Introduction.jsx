@@ -24,8 +24,26 @@ function Introduction({ className }) {
             <div className={cx('image-wrap')}>
                 <div className={cx('image-frame')}>
                     {/* <img className={cx('img')} src={images.avatar} /> */}
-                    <span className={cx('color')}></span>
-                    <div className={cx('slide')}>{/* <p className={cx('name')}>NGUYEN DANH TUAN</p> */}</div>
+                    <div className={cx('mask')}></div>
+
+                    <div className={cx('marquee-w')}>
+                        <div className={cx('marquee')}>
+                            <p className={cx('scroll-text')}>
+                                <span className={cx('text')}>NGUYEN DANH TUAN</span>
+                                <span className={cx('text')}>WEB DEVOLOPER</span>
+                                <span className={cx('text')}>FRONT-END</span>
+                                <span className={cx('text')}>BACK-END</span>
+                            </p>
+                        </div>
+                        <div className={cx('marquee', 'marquee2')}>
+                            <p className={cx('scroll-text')}>
+                                <span className={cx('text')}>NGUYEN DANH TUAN</span>
+                                <span className={cx('text')}>WEB DEVOLOPER</span>
+                                <span className={cx('text')}>FRONT-END</span>
+                                <span className={cx('text')}>BACK-END</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -32,21 +32,49 @@
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
-    &:hover .icon {
-        transform: rotate(90deg);
+    &:hover {
+        .icon {
+            transform: rotate(90deg);
+        }
+        .title {
+            transform: translateY(-100%);
+        }
+        .animation-title {
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
-    .title {
-        font-size: 4rem;
-        margin-right: 12px;
-        font-weight: bold;
+
+    .animation-text {
         text-transform: uppercase;
+        font-size: 4.4rem;
+        font-family: Sequel;
+        color: var(--text-color);
+        max-width: 500px;
+        position: relative;
+        margin-right: 12px;
+        overflow: hidden;
     }
+
+    .title {
+        transition: transform 0.5s;
+        line-height: 1;
+    }
+
+    .animation-title {
+        position: absolute;
+        line-height: 1;
+        top: 100%;
+        transition: all 0.5s;
+    }
+
     .plus .icon {
         width: 10rem;
         height: 10rem;
         font-weight: bold;
         float: right;
-        transition: all 0.3s;
+        transition: all 0.5s;
+        color: var(--text-color);
     }
 }
 
@@ -62,15 +90,16 @@
         padding: 24px;
         opacity: 0.7;
         color: var(--light-slate-grey);
-        font-size: 1.7rem;
-        font-family: 'Courier New', Courier, monospace;
-        transition: all 0.3s;
+        font-size: 1.7orem;
+        letter-spacing: 1px;
+        font-weight: 300;
+        transition: all 0.5s;
     }
 
     cursor: pointer;
     &:hover .hand .icon {
         transform: rotate(40deg);
-        transition: all 0.3s;
+        transition: all 0.5s;
     }
 
     &:hover .contact-text {
@@ -84,6 +113,7 @@
 
     .hand .icon {
         width: 4rem;
+        color: var(--text-color);
     }
 }
 .work-ss {
@@ -97,19 +127,55 @@
     border-left: 1px solid var(--slight-black);
     cursor: pointer;
 
-    &:hover .arrow {
-        transform: translateX(40%);
-        transition: all 0.3s;
+    .animation-text {
+        width: 100%;
+        text-transform: uppercase;
+        font-family: Sequel;
+        color: var(--text-color);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .present {
+        font-size: 3rem;
+        transition: transform 0.5s;
+    }
+
+    .animation {
+        font-size: 3.6rem;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    .animation .arrow .icon {
+        font-size: 4.6rem;
     }
 
     .title {
-        font-size: 3rem;
         margin-right: 12px;
-        font-weight: bold;
-        text-transform: uppercase;
     }
+
+    &:hover {
+        .present {
+            transform: translateY(-100%);
+        }
+        .animation {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
     .arrow .icon {
         width: 4rem;
+        color: var(--text-color);
     }
 }
 
@@ -131,6 +197,10 @@
     .about-ss {
         justify-content: space-between;
         padding: 48px;
+        .animation-text {
+            // max-width: none;
+            font-size: 3.6rem;
+        }
     }
 
     .work-ss {
@@ -140,6 +210,12 @@
         .arrow {
             float: right;
             margin-right: 12px;
+        }
+
+        .present,
+        .animation {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
@@ -161,5 +237,9 @@
     .about-ss .plus .icon {
         width: 7rem;
         height: 7rem;
+    }
+
+    .about-ss .animation-text {
+        font-size: 3rem;
     }
 }

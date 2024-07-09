@@ -1,6 +1,9 @@
-const Tool = ({ className, width, height }) => {
+import { forwardRef } from 'react';
+
+const Tool = ({ className, width, height }, ref) => {
     return (
         <svg
+            ref={ref}
             className={className}
             width={width}
             height={height}
@@ -29,4 +32,4 @@ const Tool = ({ className, width, height }) => {
     );
 };
 
-export default Tool;
+export default forwardRef(Tool);

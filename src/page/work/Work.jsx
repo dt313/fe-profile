@@ -33,8 +33,12 @@ function Work() {
                     className={cx('title-ss')}
                     onMouseEnter={() => cursorChangeHandler('search')}
                     onMouseLeave={() => cursorChangeHandler('')}
+                    onClick={() => window.open('https://reactjs-blog-beta.vercel.app')}
                 >
-                    <h2 className={cx('title')}>Personal Blog</h2>
+                    <div className={cx('animation-text')}>
+                        <p className={cx('title')}>Personal Blog</p>
+                        <p className={cx('animation-title')}>Show project</p>
+                    </div>
                     <span className={cx('plus')}>
                         <Plus className={cx('icon')} />
                     </span>

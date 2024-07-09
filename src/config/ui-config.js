@@ -74,5 +74,6 @@ const links = {
     fb: 'https://www.facebook.com/profile.php?id=100015195702096',
     gh: 'https://github.com/dt313',
     blog: 'https://reactjs-blog-beta.vercel.app',
+    gmail: 'dt313.dev21@gmail.com',
 };
 export { skills, techList, links };

@@ -6,11 +6,16 @@ import images from '@/assets/imgs';
 import RightArrow from '@/assets/icons/rarrow';
 import { useContext } from 'react';
 import { MouseContext } from '@/context/mouse-context';
+import { useNavigate } from 'react-router-dom';
+import { ThemeContext } from '@/context/theme-context';
 
 const cx = classNames.bind(styles);
 
 function Home() {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    const { theme, handleChangeTheme } = useContext(ThemeContext);
+
+    const navigator = useNavigate();
     return (
         <div className={cx('wrapper')}>
             <div className={cx('left')}>
@@ -19,10 +24,23 @@ function Home() {
                 </div>
                 <div
                     className={cx('about-ss')}
-                    onMouseEnter={() => cursorChangeHandler('about')}
-                    onMouseLeave={() => cursorChangeHandler('')}
+                    onMouseEnter={() => {
+                        cursorChangeHandler('about');
+                        handleChangeTheme('light');
+                    }}
+                    onMouseLeave={() => {
+                        cursorChangeHandler('');
+                        handleChangeTheme('dark');
+                    }}
+                    onClick={() => {
+                        navigator('/about');
+                        handleChangeTheme('dark');
+                    }}
                 >
-                    <p className={cx('title')}>Web Developer</p>
+                    <div className={cx('animation-text')}>
+                        <p className={cx('title')}> Nguyen Danh Tuan</p>
+                        <p className={cx('animation-title')}>Web Devoloper</p>
+                    </div>
                     <span className={cx('plus')}>
                         <Plus className={cx('icon')} />
                     </span>
@@ -31,8 +49,13 @@ function Home() {
             <div className={cx('right')}>
                 <div
                     className={cx('contact-ss')}
-                    onMouseEnter={() => cursorChangeHandler('contact')}
-                    onMouseLeave={() => cursorChangeHandler('')}
+                    onMouseEnter={() => {
+                        cursorChangeHandler('contact');
+                    }}
+                    onMouseLeave={() => {
+                        cursorChangeHandler('');
+                    }}
+                    onClick={() => navigator('/contact')}
                 >
                     <span className={cx('hand')}>
                         <HandIcon className={cx('icon')} />
@@ -47,11 +70,22 @@ function Home() {
                     className={cx('work-ss')}
                     onMouseEnter={() => cursorChangeHandler('work')}
                     onMouseLeave={() => cursorChangeHandler('')}
+                    onClick={() => navigator('/work')}
                 >
-                    <span className={cx('title')}>Work</span>
-                    <span className={cx('arrow')}>
-                        <RightArrow className={cx('icon')} />
-                    </span>
+                    <div className={cx('animation-text')}>
+                        <div className={cx('present')}>
+                            <span className={cx('title')}>Work</span>
+                            <span className={cx('arrow')}>
+                                <RightArrow className={cx('icon')} />
+                            </span>
+                        </div>
+                        <div className={cx('animation')}>
+                            <span className={cx('title')}>Work</span>
+                            <span className={cx('arrow')}>
+                                <RightArrow className={cx('icon')} />
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

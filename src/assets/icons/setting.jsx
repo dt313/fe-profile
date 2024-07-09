@@ -1,4 +1,6 @@
-const Setting = ({ className, width, height }) => {
+import { forwardRef } from 'react';
+
+const Setting = ({ className, width, height }, ref) => {
     return (
         <svg
             className={className}
@@ -6,6 +8,7 @@ const Setting = ({ className, width, height }) => {
             height={height}
             viewBox="0 0 175 175"
             fill="none"
+            ref={ref}
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
@@ -16,4 +19,4 @@ const Setting = ({ className, width, height }) => {
     );
 };
 
-export default Setting;
+export default forwardRef(Setting);

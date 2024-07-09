@@ -33,19 +33,46 @@
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
-    &:hover .icon {
-        transform: rotate(90deg);
+
+    &:hover {
+        .icon {
+            transform: rotate(90deg);
+        }
+        .title {
+            transform: translateY(-100%);
+        }
+        .animation-title {
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
-    .title {
-        font-size: 4rem;
-        margin-right: 12px;
-        font-weight: bold;
+
+    .animation-text {
         text-transform: uppercase;
+        font-size: 4.4rem;
+        font-family: Sequel;
+        color: var(--text-color);
+        max-width: 500px;
+        position: relative;
+        margin-right: 12px;
+        overflow: hidden;
     }
+
+    .title {
+        transition: transform 0.5s;
+        line-height: 1;
+    }
+
+    .animation-title {
+        position: absolute;
+        line-height: 1;
+        top: 100%;
+        transition: all 0.5s;
+    }
+
     .plus .icon {
         width: 10rem;
         height: 10rem;
-        font-weight: bold;
         float: right;
         transition: all 0.3s;
     }
@@ -65,7 +92,8 @@
         padding: 24px;
         opacity: 0.7;
         font-size: 1.7rem;
-        font-family: 'Courier New', Courier, monospace;
+        font-weight: 300;
+        letter-spacing: 1px;
         color: var(--light-slate-grey);
     }
 }
@@ -96,7 +124,7 @@
     }
 
     &:hover {
-        background-color: var(--midnight-blue);
+        background-color: #1e243529;
     }
 }
 
@@ -149,6 +177,10 @@
         .plus .icon {
             width: 7rem;
             height: 7rem;
+        }
+
+        .animation-text {
+            font-size: 3rem;
         }
     }
     .description-ss .description-text {
