@@ -20,12 +20,11 @@
     border-right: 1px solid var(--slight-black);
 }
 
-.logo-icon {
+.logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     margin-left: 60px;
-    font-size: 3rem;
-    font-family: fantasy;
-    cursor: pointer;
-    z-index: 3;
 }
 
 .menu {
@@ -295,7 +294,7 @@
         flex: 65%;
     }
 
-    .logo-icon {
+    .logo-img {
         margin-left: 24px;
     }
 

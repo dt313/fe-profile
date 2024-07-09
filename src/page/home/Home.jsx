@@ -8,12 +8,14 @@ import { useContext } from 'react';
 import { MouseContext } from '@/context/mouse-context';
 import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '@/context/theme-context';
+import useTitle from '@/hook/useTitle';
 
 const cx = classNames.bind(styles);
 
 function Home() {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
     const { theme, handleChangeTheme } = useContext(ThemeContext);
+    useTitle('Danh Tuấn | Home');
 
     const navigator = useNavigate();
     return (

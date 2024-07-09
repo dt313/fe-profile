@@ -11,6 +11,7 @@ import { useContext, useEffect, useRef } from 'react';
 import { MouseContext } from '@/context/mouse-context';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import useTitle from '@/hook/useTitle';
 
 const cx = classNames.bind(styles);
 
@@ -18,7 +19,7 @@ function About() {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
     const navigator = useNavigate();
     const toolImgRef = useRef();
-
+    useTitle('Danh Tuấn | About');
     useEffect(() => {
         const handleScroll = () => {
             const windowHeight = window.innerHeight;

@@ -76,4 +76,23 @@ const links = {
     blog: 'https://reactjs-blog-beta.vercel.app',
     gmail: 'dt313.dev21@gmail.com',
 };
-export { skills, techList, links };
+
+const projects = [
+    {
+        title: 'Personal Blog',
+        link: 'https://reactjs-blog-beta.vercel.app',
+        description:
+            'Hi, my name is Nguyen Danh Tuan. I am a skilled web developer specializing in ReactJS and \
+                        NodeJS. I have extensive experience building dynamic, high-performance web applications and am \
+                        passionate about creating seamless user experiences.',
+    },
+    {
+        title: 'Todo list app',
+        link: 'https://todo-app-0003.netlify.app',
+        description:
+            'Hi, my name is Nguyen Danh Tuan. I am a skilled web developer specializing in ReactJS and \
+                        NodeJS. I have extensive experience building dynamic, high-performance web applications and am \
+                        passionate about creating seamless user experiences.',
+    },
+];
+export { skills, techList, links, projects };

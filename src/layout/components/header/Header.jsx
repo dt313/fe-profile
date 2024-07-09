@@ -6,6 +6,7 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { useState, useRef, useContext } from 'react';
 import { MouseContext } from '@/context/mouse-context';
 import { links } from '@/config/ui-config';
+import images from '@/assets/imgs';
 const cx = classNames.bind(styles);
 function Header() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -46,15 +47,14 @@ function Header() {
     return (
         <nav className={cx('wrapper')}>
             <div className={cx('logo')}>
-                <NavLink
-                    className={cx('logo-icon')}
-                    to="/"
+                <img
+                    className={cx('logo-img')}
+                    src={images.logo}
+                    atl="logo"
                     onMouseEnter={() => cursorChangeHandler('large')}
                     onMouseLeave={() => cursorChangeHandler('')}
-                >
-                    {' '}
-                    dt
-                </NavLink>
+                    onClick={() => navigator('/')}
+                />
             </div>
             <div className={cx('menu')}>
                 <NavLink

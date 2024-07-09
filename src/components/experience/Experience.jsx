@@ -4,7 +4,7 @@ import RightArrow from '@/assets/icons/rarrow';
 import LeftArrow from '@/assets/icons/larrow';
 import { skills } from '@/config/ui-config';
 import SkillCard from '../skill-card/SkillCard';
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useRef } from 'react';
 import { MouseContext } from '@/context/mouse-context';
 import ScrollContainer from 'react-indiana-drag-scroll';
 

@@ -8,10 +8,12 @@ import { useContext } from 'react';
 import { MouseContext } from '@/context/mouse-context';
 import { links } from '@/config/ui-config';
 import { motion } from 'framer-motion';
+import useTitle from '@/hook/useTitle';
 const cx = classNames.bind(styles);
 
 function Contact() {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    useTitle('Danh Tuấn | Contact');
 
     return (
         <div className={cx('wrapper')}>

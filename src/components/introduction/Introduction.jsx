@@ -23,7 +23,6 @@ function Introduction({ className }) {
             </div>
             <div className={cx('image-wrap')}>
                 <div className={cx('image-frame')}>
-                    {/* <img className={cx('img')} src={images.avatar} /> */}
                     <div className={cx('mask')}></div>
 
                     <div className={cx('marquee-w')}>
