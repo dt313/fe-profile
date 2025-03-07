@@ -12,7 +12,7 @@ function Project({ content = {}, index, handleMoveLeft, handleMoveRight }) {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
     const handleClickWebsite = (e) => {
         e.preventDefault();
-        console.log('CLick');
+        // console.log('CLick');
     };
     return (
         <div className={cx('wrapper')}>

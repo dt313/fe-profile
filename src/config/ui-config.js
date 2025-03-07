@@ -48,19 +48,23 @@ const links = {
 
 const projects = [
     {
-        title: 'Personal Blog',
-        link: 'https://reactjs-blog-beta.vercel.app',
+        title: 'Bagoftech Blog',
+        link: 'https://bagoftech.vercel.app/',
         description:
-            "Welcome to my blog! This is a space where I share stories, thoughts,\
-             and experiences about technology and programming. Let's explore and learn together through each post.Thank you so much for visiting!",
+            'Welcome to Bagoftech Blog! This is a platform where I share my insights, experiences, and the latest trends in technology and programming. Join me as we dive deep into various tech topics and expand our knowledge together. Thank you for stopping by!',
     },
     {
-        title: 'Todo list app',
+        title: 'Wedding Invitation',
+        link: 'https://thiep-cuoi-hung-thuy.vercel.app/?name=Danh%20Tuan',
+        description:
+            'Welcome to our Wedding Invitation page! Here, you can view all the details about our upcoming celebration, RSVP with ease, and share in the joy of this special occasion. We look forward to celebrating with you!',
+    },
+    {
+        title: 'Personal Todolist',
         link: 'https://todo-app-0003.netlify.app',
         description:
-            'Welcome to TodoApp! This is where you can efficiently manage and organize your tasks. \
-            With TodoApp, you can easily create, prioritize, and track your tasks from anywhere.\
-             Start organizing your life smarter and more effectively right now!',
+            'Welcome to the Todo List App! Stay organized and efficient by managing your tasks effortlessly. With this app, you can create, prioritize, and track your to-do list anytime and anywhere. Start boosting your productivity today!',
     },
 ];
+
 export { skills, techList, links, projects };
