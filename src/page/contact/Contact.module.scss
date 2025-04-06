@@ -5,23 +5,22 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 64px;
+    padding-top: 11.9rem;
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
     max-width: 1400px;
     width: 100%;
-    position: relative;
 }
 .body {
-    height: calc(100vh - 64px - 11.9vh);
+    height: calc(100vh - 11.9vh * 2);
     padding: 80px;
     width: 100%;
 }
 
 .noise {
-    width: 100%;
-    height: 100vh;
     background-image: url('../../assets/imgs/noise.png');
     background-size: contain;
     position: absolute;
@@ -59,7 +58,7 @@
 .large-text {
     max-width: 700px;
     margin-top: 64px;
-    margin-bottom: 24px;
+    margin-bottom: 64px;
     text-transform: uppercase;
     line-height: 1;
     font-family: Sequel;
@@ -144,6 +143,16 @@
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        top: 25rem;
+    }
+    100% {
+        opacity: 0.64;
+    }
+}
+
 .gradient {
     background-image: radial-gradient(
         circle farthest-corner at 40% 50%,
@@ -155,9 +164,10 @@
     width: 1000px;
     height: 1000px;
     position: absolute;
-    top: -200px;
-    right: -200px;
+    top: -25rem;
+    right: -25rem;
     z-index: 0;
+    animation: fadeIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media (max-width: 996px) {
@@ -168,6 +178,10 @@
     .gradient {
         width: 80rem;
         height: 80rem;
+    }
+
+    .gradient {
+        top: 20rem;
     }
 
     .email::before {
@@ -199,9 +213,9 @@
 
     .large-text {
         font-size: 4.2rem;
-
         width: 100%;
         max-width: none;
+        margin-bottom: 64px;
     }
 
     .email {

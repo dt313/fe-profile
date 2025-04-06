@@ -171,11 +171,15 @@
             float: right;
         }
     }
+    .control-ss {
+        border-left: none;
+    }
 }
 
 @media (max-width: 698px) {
     .thumnail-ss {
-        padding: 12 12px;
+        padding: 0;
+        border-radius: 0px;
     }
     .title-ss {
         padding: 0 12px;
