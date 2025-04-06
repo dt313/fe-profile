@@ -5,21 +5,23 @@ import LeftArrow from '@/assets/icons/larrow';
 import RightArrow from '@/assets/icons/rarrow';
 import { useContext } from 'react';
 import { MouseContext } from '@/context/mouse-context';
+import { ThemeContext } from '@/context/theme-context';
 
 const cx = classNames.bind(styles);
 
 function Project({ content = {}, index, handleMoveLeft, handleMoveRight }) {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    const { theme, handleChangeTheme } = useContext(ThemeContext);
     const handleClickWebsite = (e) => {
         e.preventDefault();
         // console.log('CLick');
     };
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('left')}>
                 <div className={cx('thumnail-ss')}>
                     {/* <img className={cx('thumnail')} src={images.avatar} /> */}
-
                     <iframe
                         className={cx('thumnail')}
                         onClick={handleClickWebsite}
@@ -29,8 +31,14 @@ function Project({ content = {}, index, handleMoveLeft, handleMoveRight }) {
                 </div>
                 <div
                     className={cx('title-ss')}
-                    onMouseEnter={() => cursorChangeHandler('search')}
-                    onMouseLeave={() => cursorChangeHandler('')}
+                    onMouseEnter={() => {
+                        cursorChangeHandler('search');
+                        handleChangeTheme('light');
+                    }}
+                    onMouseLeave={() => {
+                        cursorChangeHandler('');
+                        handleChangeTheme('dark');
+                    }}
                     onClick={() => window.open(content.link)}
                 >
                     <div className={cx('animation-text')}>

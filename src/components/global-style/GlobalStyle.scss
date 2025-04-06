@@ -4,10 +4,10 @@
     --system-ui-font: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol';
     --text-color: #fbf3f3;
-    --black: #050a18;
+    --black: black;
     --white-smoke: #f2f2f2;
     --light-slate-grey: #747083;
-    --slight-black: #1e2435;
+    --slight-black: #515766;
     --medium-purple: #9d84ff;
     --white: white;
     --royal-blue: #4b6bdd;
@@ -15,10 +15,12 @@
     --midnight-blue: #0a0834;
     --lavender: #e3ecff;
     --hover-blue: #0d1429;
+    --header-background: 00000090;
 }
 
 [data-theme='light'] {
     --black: #e3ecff;
+    --header-background: #e3ecff;
     --slight-black: #1e243533;
     --text-color: #0a0834;
 }

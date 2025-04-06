@@ -1,19 +1,59 @@
 .wrapper {
     display: flex;
     width: 100%;
+    height: 100%;
     --time: 15s;
 }
 
 .text-wrap {
     flex: 1;
-    padding: 24px;
+    padding: 0 24px;
     padding-right: 100px;
+    padding-top: 150px;
     height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-self: flex-end;
     z-index: 2;
+    position: relative;
+}
+
+.lan-selection {
+    position: absolute;
+    top: 50px;
+}
+
+.lan-opt-btn {
+    min-width: 50px;
+    margin-right: 12px;
+    padding: 8px 16px;
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+    background-color: #fff;
+    box-shadow:
+        rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+    transition: font-weight 0.2s ease-in-out;
+
+    &:hover {
+        font-weight: 600;
+    }
+}
+
+.lan-opt-btn.active {
+    color: var(--medium-purple);
+    font-weight: 600;
 }
 
 .main-text {
@@ -23,10 +63,13 @@
     z-index: 1;
 }
 
+.sub-text-wrap {
+    margin-bottom: 32px;
+}
+
 .sub-text {
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: 32px;
     opacity: 0.4;
     letter-spacing: 1px;
     word-spacing: 1px;
@@ -34,6 +77,9 @@
 
 .image-wrap {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-frame {
@@ -67,7 +113,7 @@
     background-image: radial-gradient(circle farthest-corner at 50% 50%, rgba(0, 0, 0, 0) 50%, var(--black));
 }
 
-.marquee-w {
+.marquee-wrap {
     position: absolute;
     display: block;
     width: 100%;
@@ -77,35 +123,18 @@
     left: 0;
     overflow: hidden;
 }
-.marquee {
-    position: absolute;
-    display: block;
-    margin: auto auto;
-    white-space: nowrap;
-    overflow: hidden;
-    min-width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.marquee .scroll-text {
-    display: inline-block;
-    padding-left: 100%;
-    text-align: center;
-    white-space: nowrap;
-    position: relative;
-    font-size: 2rem;
-    font-family: Sequel;
-    animation: marquee 30s linear infinite;
-}
 
-.marquee2 .scroll-text {
-    animation-delay: 15s;
+.marquee {
+    height: 100%;
+    width: 100%;
 }
 
 .text {
     padding: 0 24px;
     position: relative;
     color: #fff;
+    font-family: Sequel;
+    font-size: 1.6rem;
 }
 
 .text::before {
@@ -118,16 +147,6 @@
     right: -4px;
     top: 50%;
     transform: translateY(-50%);
-}
-// }
-
-@keyframes marquee {
-    0% {
-        transform: translate(20%, 0);
-    }
-    100% {
-        transform: translate(-100%, 0);
-    }
 }
 
 @media (max-width: 996px) {

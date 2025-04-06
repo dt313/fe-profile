@@ -3,14 +3,61 @@ import styles from './Home.module.scss';
 import HandIcon from '@/assets/icons/hand';
 import Plus from '@/assets/icons/plus';
 import images from '@/assets/imgs';
+import { gallery } from '@/assets/imgs';
 import RightArrow from '@/assets/icons/rarrow';
 import { useContext } from 'react';
 import { MouseContext } from '@/context/mouse-context';
 import { useNavigate } from 'react-router-dom';
 import { ThemeContext } from '@/context/theme-context';
+
 import useTitle from '@/hook/useTitle';
+import InfiniteMenu from '@/components/infiniteMenu';
 
 const cx = classNames.bind(styles);
+const items = [
+    {
+        image: gallery.gallery1,
+        link: '/about',
+        title: 'Drag',
+        description: 'Thử click, kéo, thả ở đây !',
+    },
+    {
+        image: gallery.gallery2,
+        link: '/about',
+        title: 'Drag',
+        description: 'Thử click, kéo, thả ở đây !',
+    },
+    {
+        image: gallery.gallery3,
+        link: '/about',
+        title: 'Drag',
+        description: 'Thử click, kéo, thả ở đây !',
+    },
+    {
+        image: gallery.gallery4,
+        link: '/about',
+        title: 'Drag',
+        description: 'Thử click, kéo, thả ở đây !',
+    },
+    {
+        image: gallery.gallery5,
+        link: '/about',
+        title: 'Drag',
+        description: 'Thử click, kéo, thả ở đây !',
+    },
+    {
+        image: gallery.gallery6,
+        link: '/about',
+        title: 'Drag',
+        description: 'Thử click, kéo, thả ở đây !',
+    },
+    {
+        image: gallery.gallery7,
+        link: '/about',
+        title: 'Drag',
+        description: 'Thử click, kéo, thả ở đây !',
+    },
+];
 
 function Home() {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
@@ -22,7 +69,7 @@ function Home() {
         <div className={cx('wrapper')}>
             <div className={cx('left')}>
                 <div className={cx('thumnail-ss')}>
-                    <img className={cx('avatar')} src={images.avatar} />
+                    <InfiniteMenu items={items} theme="light" />
                 </div>
                 <div
                     className={cx('about-ss')}

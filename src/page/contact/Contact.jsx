@@ -17,46 +17,50 @@ function Contact() {
 
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('body')}>
-                <div className={cx('noise')}></div>
-                <AroundText className={cx('title')}>contact</AroundText>
-                <motion.h1
-                    initial={{ y: '100px', opacity: 0 }}
-                    animate={{ y: '0', opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    className={cx('large-text')}
-                >
-                    Get in touch
-                </motion.h1>
-                <div className={cx('email')}>
-                    <GoArrowUpRight className={cx('right-arrow')} />
-                    <a className={cx('gmail')} href={`mailto:${links.gmail}`}>
-                        {links.gmail}
-                    </a>
-                </div>
-                <div className={cx('icons')}>
-                    <a
-                        className={cx('icon-wrap')}
-                        onMouseEnter={() => cursorChangeHandler('mini-dot')}
-                        onMouseLeave={() => cursorChangeHandler('')}
-                        onClick={() => window.open(links.gh)}
+            <div className={cx('container')}>
+                <div className={cx('body')}>
+                    <div className={cx('noise')}></div>
+                    <AroundText className={cx('title')}>contact</AroundText>
+                    <motion.h1
+                        initial={{ y: '100px', opacity: 0 }}
+                        animate={{ y: '0', opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        className={cx('large-text')}
                     >
-                        <FaGithubAlt className={cx('icon')} />
-                    </a>
-                    <a
-                        className={cx('icon-wrap')}
-                        onMouseEnter={() => cursorChangeHandler('mini-dot')}
-                        onMouseLeave={() => cursorChangeHandler('')}
-                        onClick={() => window.open(links.fb)}
-                    >
-                        <GrFacebookOption className={cx('icon')} />
-                    </a>
+                        Get in touch
+                    </motion.h1>
+                    <div className={cx('email')}>
+                        <GoArrowUpRight className={cx('right-arrow')} />
+                        <a className={cx('gmail')} href={`mailto:${links.gmail}`}>
+                            {links.gmail}
+                        </a>
+                    </div>
+                    <div className={cx('icons')}>
+                        <a
+                            className={cx('icon-wrap')}
+                            onMouseEnter={() => cursorChangeHandler('mini-dot')}
+                            onMouseLeave={() => cursorChangeHandler('')}
+                            onClick={() => window.open(links.gh)}
+                        >
+                            <FaGithubAlt className={cx('icon')} />
+                        </a>
+                        <a
+                            className={cx('icon-wrap')}
+                            onMouseEnter={() => cursorChangeHandler('mini-dot')}
+                            onMouseLeave={() => cursorChangeHandler('')}
+                            onClick={() => window.open(links.fb)}
+                        >
+                            <GrFacebookOption className={cx('icon')} />
+                        </a>
+                    </div>
+                    <span className={cx('gradient')}></span>
                 </div>
-                <span className={cx('gradient')}></span>
             </div>
             <div className={cx('footer')}>
                 <span className={cx('footer-text')}>2024@Danh Tuan</span>
-                <span className={cx('footer-text')}>Clone : dylanbrouwer.design</span>
+                <a className={cx('footer-text')} href="http://dylanbrouwer.design" target="_blank">
+                    Clone : dylanbrouwer.design
+                </a>
             </div>
         </div>
     );

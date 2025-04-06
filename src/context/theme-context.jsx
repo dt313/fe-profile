@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const ThemeContext = createContext({
     theme: 'dark',
@@ -6,11 +6,20 @@ export const ThemeContext = createContext({
 });
 
 const ThemeContextProvider = (props) => {
-    const [theme, setTheme] = useState('dark');
+    // Initialize theme from localStorage or default to 'dark'
+    const [theme, setTheme] = useState(() => {
+        return localStorage.getItem('theme') || 'dark';
+    });
 
-    const handleChangeTheme = (theme) => {
-        setTheme(theme);
+    const handleChangeTheme = (newTheme) => {
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme); // Save theme to localStorage
     };
+
+    useEffect(() => {
+        // Sync theme with localStorage on mount
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     return (
         <ThemeContext.Provider

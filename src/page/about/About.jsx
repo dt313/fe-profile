@@ -12,11 +12,12 @@ import { MouseContext } from '@/context/mouse-context';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import useTitle from '@/hook/useTitle';
+import Marquee from 'react-fast-marquee';
 
 const cx = classNames.bind(styles);
 
 function About() {
-    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    const { cursorChangeHandler } = useContext(MouseContext);
     const navigator = useNavigate();
     const toolImgRef = useRef();
     useTitle('Danh Tuấn | About');
@@ -51,7 +52,7 @@ function About() {
                         transition={{ duration: 1, delay: 0.3 }}
                         className={cx('large-text')}
                     >
-                        An eye
+                        Web
                     </motion.h1>
                     <motion.h1
                         initial={{ y: '100px', opacity: 0 }}
@@ -59,7 +60,7 @@ function About() {
                         transition={{ duration: 1, delay: 0.6 }}
                         className={cx('large-text')}
                     >
-                        for web
+                        Wizardry
                     </motion.h1>
                     <motion.h1
                         initial={{ y: '100px', opacity: 0 }}
@@ -67,7 +68,7 @@ function About() {
                         transition={{ duration: 1, delay: 0.9 }}
                         className={cx('large-text')}
                     >
-                        devolopment
+                        in Action
                     </motion.h1>
                 </div>
                 <div className={cx('object')}>
@@ -100,45 +101,28 @@ function About() {
                     onMouseLeave={() => cursorChangeHandler('')}
                     onClick={() => navigator('/contact')}
                 >
-                    <div className={cx('marquee-w')}>
-                        <div className={cx('marquee')}>
-                            <p className={cx('scroll-text')}>
-                                <span className={cx('text')}>
-                                    Just say hi <RightArrow className={cx('r-arrow')} />
-                                </span>
-                                <span className={cx('text')}>
-                                    work together <RightArrow className={cx('r-arrow')} />
-                                </span>
-                                <span className={cx('text')}>
-                                    get in touch <RightArrow className={cx('r-arrow')} />
-                                </span>
-                                <span className={cx('text')}>
-                                    contact me <RightArrow className={cx('r-arrow')} />
-                                </span>
-                            </p>
-                        </div>
-                        <div className={cx('marquee', 'marquee2')}>
-                            <p className={cx('scroll-text')}>
-                                <span className={cx('text')}>
-                                    Just say hi <RightArrow className={cx('r-arrow')} />
-                                </span>
-                                <span className={cx('text')}>
-                                    work together <RightArrow className={cx('r-arrow')} />
-                                </span>
-                                <span className={cx('text')}>
-                                    get in touch <RightArrow className={cx('r-arrow')} />
-                                </span>
-                                <span className={cx('text')}>
-                                    contact me <RightArrow className={cx('r-arrow')} />
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                    <Marquee className={cx('marquee-w')} autoFill speed={80}>
+                        <span className={cx('text')}>
+                            Just say hi
+                            <RightArrow className={cx('r-arrow')} />
+                        </span>
+                        <span className={cx('text')}>
+                            work together <RightArrow className={cx('r-arrow')} />
+                        </span>
+                        <span className={cx('text')}>
+                            get in touch <RightArrow className={cx('r-arrow')} />
+                        </span>
+                        <span className={cx('text')}>
+                            contact me <RightArrow className={cx('r-arrow')} />
+                        </span>
+                    </Marquee>
                 </div>
             </div>
             <div className={cx('footer')}>
                 <span className={cx('footer-text')}> 2024@Danh Tuan</span>
-                <span className={cx('footer-text')}> Clone: dylanbrouwer.design </span>
+                <a className={cx('footer-text')} href="http://dylanbrouwer.design" target="_blank">
+                    Clone : dylanbrouwer.design
+                </a>
             </div>
         </div>
     );

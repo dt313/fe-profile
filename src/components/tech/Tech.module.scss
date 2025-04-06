@@ -28,12 +28,17 @@
 
 .tech-list {
     flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 52px;
 }
 
 .tech-item {
     display: flex;
     height: 11.9vh;
     border-top: 1px solid var(--slight-black);
+    border-bottom: 1px solid var(--slight-black);
+    padding: 0 12px;
     justify-content: flex-start;
     align-items: center;
     position: relative;
@@ -81,6 +86,7 @@
     }
     .tech-list {
         margin-top: 32px;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -105,8 +111,12 @@
 }
 
 @media (max-width: 480px) {
+    .wrapper {
+        padding: 0;
+    }
     .text-wrap {
         margin-right: 20px;
+
         .title {
             font-size: 2.8rem;
         }

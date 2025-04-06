@@ -2,13 +2,13 @@ import images from '@/assets/imgs';
 
 const skills = [
     {
-        time: 'feature',
+        time: 'furture',
         title: 'unKnow',
         tags: ['devoloper', 'Vietnam'],
         description: 'Probably working at a certain company in Vietname or Remote devoloper',
     },
     {
-        time: 'current-feature',
+        time: 'current-furture',
         title: 'unKnow',
         tags: ['devoloper', 'Korean'],
         description: 'Probably working at a certain company in Korean or somewhere',
@@ -36,6 +36,16 @@ const techList = [
         title: 'NodeJs',
         logo: images.nodejsLogo,
         tag: 'Backend',
+    },
+    {
+        logo: images.dockerLogo,
+        title: 'Docker',
+        tag: 'DevOps',
+    },
+    {
+        logo: images.sqlLogo,
+        title: 'SQL',
+        tag: 'Database',
     },
 ];
 

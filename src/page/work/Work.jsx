@@ -3,7 +3,6 @@ import styles from './Work.module.scss';
 import useTitle from '@/hook/useTitle';
 import { projects } from '@/config/ui-config';
 import Project from '@/components/project';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
 
 const cx = classNames.bind(styles);
