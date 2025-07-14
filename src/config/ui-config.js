@@ -2,21 +2,21 @@ import images from '@/assets/imgs';
 
 const skills = [
     {
-        time: 'furture',
+        time: 'future',
         title: 'unKnow',
-        tags: ['devoloper', 'Vietnam'],
+        tags: ['developer', 'Vietnam', 'Indie Hacker'],
         description: 'Probably working at a certain company in Vietname or Remote devoloper',
     },
     {
-        time: 'current-furture',
+        time: '2025 ~ future',
         title: 'unKnow',
-        tags: ['devoloper', 'Korean'],
+        tags: ['developer', 'Korean'],
         description: 'Probably working at a certain company in Korean or somewhere',
     },
     {
-        time: '2021-current',
+        time: '2021 ~ 2025',
         title: 'SSU Student',
-        tags: ['devoloper', 'university'],
+        tags: ['developer', 'university'],
         description: '4 years for personal development, getting used to class exercises, practicing teamwork skills',
     },
 ];
@@ -58,10 +58,17 @@ const links = {
 
 const projects = [
     {
+        title: 'Retro Chat App',
+        link: 'https://retro-chat-app-0407.vercel.app/',
+        description:
+            'Welcome to Retro Chat! This is a modern real-time messaging app with a nostalgic retro-style interface. Enjoy features like Google/GitHub login, group and private chats, instant messaging, emoji reactions, media sharing, notifications, and even audio/video calls. Stay connected with both style and simplicity! - (Note: The app is deployed on a free platform, so it may take a few moments to load.)',
+    },
+
+    {
         title: 'Bagoftech Blog',
         link: 'https://bagoftech.vercel.app/',
         description:
-            'Welcome to Bagoftech Blog! This is a platform where I share my insights, experiences, and the latest trends in technology and programming. Join me as we dive deep into various tech topics and expand our knowledge together. Thank you for stopping by!',
+            'Welcome to Bagoftech Blog! This is a platform where I share my insights, experiences, and the latest trends in technology and programming. Join me as we dive deep into various tech topics and expand our knowledge together. Thank you for stopping by! - (Note: The app is deployed on a free platform, so it may take a few moments to load.)',
     },
     {
         title: 'Wedding Invitation',
