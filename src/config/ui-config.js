@@ -59,7 +59,7 @@ const links = {
 const projects = [
     {
         title: 'Retro Chat App',
-        link: 'https://retro-chat-app-0407.vercel.app/',
+        link: 'https://retrochat.xyz',
         description:
             'Welcome to Retro Chat! This is a modern real-time messaging app with a nostalgic retro-style interface. Enjoy features like Google/GitHub login, group and private chats, instant messaging, emoji reactions, media sharing, notifications, and even audio/video calls. Stay connected with both style and simplicity! - (Note: The app is deployed on a free platform, so it may take a few moments to load.)',
     },
