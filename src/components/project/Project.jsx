@@ -10,8 +10,8 @@ import { ThemeContext } from '@/context/theme-context';
 const cx = classNames.bind(styles);
 
 function Project({ content = {}, index, handleMoveLeft, handleMoveRight }) {
-    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
-    const { theme, handleChangeTheme } = useContext(ThemeContext);
+    const { cursorChangeHandler } = useContext(MouseContext);
+    const { handleChangeTheme } = useContext(ThemeContext);
     const handleClickWebsite = (e) => {
         e.preventDefault();
         // console.log('CLick');
@@ -21,13 +21,31 @@ function Project({ content = {}, index, handleMoveLeft, handleMoveRight }) {
         <div className={cx('wrapper')}>
             <div className={cx('left')}>
                 <div className={cx('thumnail-ss')}>
-                    {/* <img className={cx('thumnail')} src={images.avatar} /> */}
-                    <iframe
-                        className={cx('thumnail')}
-                        onClick={handleClickWebsite}
-                        src={content.link}
-                        title="Blog"
-                    ></iframe>
+                    {content.youtobe ? (
+                        <iframe
+                            width="967"
+                            height="544"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                borderRadius: '16px',
+                                cursor: 'pointer',
+                            }}
+                            src="https://www.youtube.com/embed/aLUnQn8jccM"
+                            title="Sumai"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    ) : (
+                        <iframe
+                            className={cx('thumnail')}
+                            onClick={handleClickWebsite}
+                            src={content.link}
+                            title="Blog"
+                        ></iframe>
+                    )}
                 </div>
                 <div
                     className={cx('title-ss')}

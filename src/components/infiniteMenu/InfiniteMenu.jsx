@@ -1005,8 +1005,7 @@ export default function InfiniteMenu({ items = [], theme = 'light' }) {
     }, [items]);
 
     const handleButtonClick = () => {
-        if (!activeItem?.link) return;
-        navigator(activeItem.link);
+        navigator('about');
     };
 
     return (
@@ -1018,11 +1017,10 @@ export default function InfiniteMenu({ items = [], theme = 'light' }) {
 
             {activeItem && (
                 <>
-                    <h2 className={cx('face-title', isMoving ? 'inactive' : 'active')}>{activeItem.title}</h2>
+                    <h2 className={cx('face-title', isMoving ? 'inactive' : 'active')}>Drag</h2>
 
                     <p className={cx('face-description', isMoving ? 'inactive' : 'active')}>
-                        {' '}
-                        {activeItem.description}
+                        Thử click, kéo, thả ở đây !
                     </p>
 
                     <div onClick={handleButtonClick} className={cx('action-button', isMoving ? 'inactive' : 'active')}>

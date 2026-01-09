@@ -2,7 +2,6 @@ import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import HandIcon from '@/assets/icons/hand';
 import Plus from '@/assets/icons/plus';
-import images from '@/assets/imgs';
 import { gallery } from '@/assets/imgs';
 import RightArrow from '@/assets/icons/rarrow';
 import { useContext } from 'react';
@@ -17,51 +16,39 @@ const cx = classNames.bind(styles);
 const items = [
     {
         image: gallery.gallery1,
-        link: '/about',
-        title: 'Drag',
-        description: 'Thử click, kéo, thả ở đây !',
     },
     {
         image: gallery.gallery2,
-        link: '/about',
-        title: 'Drag',
-        description: 'Thử click, kéo, thả ở đây !',
     },
     {
         image: gallery.gallery3,
-        link: '/about',
-        title: 'Drag',
-        description: 'Thử click, kéo, thả ở đây !',
     },
     {
         image: gallery.gallery4,
-        link: '/about',
-        title: 'Drag',
-        description: 'Thử click, kéo, thả ở đây !',
     },
     {
         image: gallery.gallery5,
-        link: '/about',
-        title: 'Drag',
-        description: 'Thử click, kéo, thả ở đây !',
     },
     {
         image: gallery.gallery6,
-        link: '/about',
-        title: 'Drag',
-        description: 'Thử click, kéo, thả ở đây !',
     },
     {
         image: gallery.gallery7,
-        link: '/about',
-        title: 'Drag',
-        description: 'Thử click, kéo, thả ở đây !',
+    },
+    {
+        image: gallery.gallery7,
+    },
+    {
+        image: gallery.gallery8,
+    },
+    {
+        image: gallery.gallery9,
     },
 ];
 
 function Home() {
-    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
-    const { theme, handleChangeTheme } = useContext(ThemeContext);
+    const { cursorChangeHandler } = useContext(MouseContext);
+    const { handleChangeTheme } = useContext(ThemeContext);
     useTitle('Danh Tuấn | Home');
 
     const navigator = useNavigate();
@@ -110,8 +97,9 @@ function Home() {
                         <HandIcon className={cx('icon')} />
                     </span>
                     <p className={cx('contact-text')}>
-                        I am a fourth-year student at Soongsil University (SSU) in Seoul, South Korea's capital. It's
-                        nice if we can cooperate together
+                        {
+                            "I am a fourth-year student at Soongsil University (SSU) in Seoul, South Korea's capital. It's nice if we can cooperate together"
+                        }
                     </p>
                 </div>
                 <div

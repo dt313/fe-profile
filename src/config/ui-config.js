@@ -58,6 +58,19 @@ const links = {
 
 const projects = [
     {
+        title: 'Wishu Hair Salon',
+        link: 'https://www.wishuhair.com',
+        description:
+            'A fancy landing page for Wishu Hair Salon featuring a beautiful and elegant UI design. The site highlights premium hair services with a modern theme and supports both English and Vietnamese.',
+    },
+    {
+        title: 'Sumai Extension',
+        link: 'https://chromewebstore.google.com/detail/sumai/dogbamblohinghhblhdcpdpkphfmlecf',
+        description:
+            'Summarize, explain, and translate content directly in your browser using LLM AI in your language. Sumai helps you summarize, explain, and translate text directly in your browser quickly and conveniently.',
+        youtobe: 'https://www.youtube.com/watch?v=aLUnQn8jccM',
+    },
+    {
         title: 'Retro Chat App',
         link: 'https://retrochat.xyz',
         description:
