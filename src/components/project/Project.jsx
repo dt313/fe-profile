@@ -51,11 +51,9 @@ function Project({ content = {}, index, handleMoveLeft, handleMoveRight }) {
                     className={cx('title-ss')}
                     onMouseEnter={() => {
                         cursorChangeHandler('search');
-                        handleChangeTheme('light');
                     }}
                     onMouseLeave={() => {
                         cursorChangeHandler('');
-                        handleChangeTheme('dark');
                     }}
                     onClick={() => window.open(content.link)}
                 >
