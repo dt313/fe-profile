@@ -98,7 +98,7 @@ function Home() {
                     </span>
                     <p className={cx('contact-text')}>
                         {
-                            "I am a fourth-year student at Soongsil University (SSU) in Seoul, South Korea's capital. It's nice if we can cooperate together"
+                            "I graduated from Soongsil University (SSU) in Seoul, South Korea's capital. It would be great if we could cooperate together"
                         }
                     </p>
                 </div>
