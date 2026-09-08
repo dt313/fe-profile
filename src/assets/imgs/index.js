@@ -11,7 +11,7 @@ import gallery3 from './gallery/3.png';
 import gallery4 from './gallery/4.png';
 import gallery5 from './gallery/5.png';
 import gallery6 from './gallery/6.png';
-import gallery7 from './gallery/7.png';
+// import gallery7 from './gallery/7.png';
 import gallery8 from './gallery/8.png';
 import gallery9 from './gallery/9.png';
 
@@ -32,7 +32,7 @@ export const gallery = {
     gallery4,
     gallery5,
     gallery6,
-    gallery7,
+    // gallery7,
     gallery8,
     gallery9,
 };

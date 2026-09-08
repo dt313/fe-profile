@@ -11,7 +11,7 @@ const skills = [
         time: '2025 ~ future',
         title: 'unKnow',
         tags: ['developer', 'Korean'],
-        description: 'Probably working at a certain company in Korean or somewhere',
+        description: 'Software Engineer at FPT Korea, working on backend and software development.',
     },
     {
         time: '2021 ~ 2025',
@@ -94,12 +94,12 @@ const projects = [
         description:
             'Welcome to our Wedding Invitation page! Here, you can view all the details about our upcoming celebration, RSVP with ease, and share in the joy of this special occasion. We look forward to celebrating with you!',
     },
-    {
-        title: 'Todolist',
-        link: 'https://todo-app-0003.netlify.app',
-        description:
-            'Welcome to the Todo List App! Stay organized and efficient by managing your tasks effortlessly. With this app, you can create, prioritize, and track your to-do list anytime and anywhere. Start boosting your productivity today!',
-    },
+    // {
+    //     title: 'Todolist',
+    //     link: 'https://todo-app-0003.netlify.app',
+    //     description:
+    //         'Welcome to the Todo List App! Stay organized and efficient by managing your tasks effortlessly. With this app, you can create, prioritize, and track your to-do list anytime and anywhere. Start boosting your productivity today!',
+    // },
 ];
 
 export { skills, techList, links, projects };

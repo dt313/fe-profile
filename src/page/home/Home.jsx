@@ -32,12 +32,12 @@ const items = [
     {
         image: gallery.gallery6,
     },
-    {
-        image: gallery.gallery7,
-    },
-    {
-        image: gallery.gallery7,
-    },
+    // {
+    //     image: gallery.gallery7,
+    // },
+    // {
+    //     image: gallery.gallery7,
+    // },
     {
         image: gallery.gallery8,
     },

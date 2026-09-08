@@ -1,5 +1,4 @@
 import routes from '@/config/routes';
-import DefaultLauout from '@/layout/DefaultLayout/DefaultLayout';
 import About from '@/page/about/About';
 import Contact from '@/page/contact/Contact';
 import Home from '@/page/home/Home';

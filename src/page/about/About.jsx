@@ -2,7 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './About.module.scss';
 import AroundText from '@/components/around-text/AroundText';
 import Introduction from '@/components/introduction';
-import Exprerience from '@/components/experience/Experience';
+import Experience from '@/components/experience/Experience';
 import Tool from '@/assets/icons/tool';
 import Tech from '@/components/tech/Tech';
 import FinalSection from '@/components/final-section/FinalSection';
@@ -80,7 +80,7 @@ function About() {
                 <Introduction />
             </div>
             <div className={cx('experience')}>
-                <Exprerience />
+                <Experience />
             </div>
 
             <div className={cx('scroll-text')}>

@@ -9,8 +9,8 @@ import { MouseContext } from '@/context/mouse-context';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
 const cx = classNames.bind(styles);
-function Exprerience() {
-    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+function Experience() {
+    const {  cursorChangeHandler } = useContext(MouseContext);
     const sliderRef = useRef();
 
     const handleClickLeftArrow = () => {
@@ -27,7 +27,7 @@ function Exprerience() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
-                <h2 className={cx('title')}>Work Exprerience</h2>
+                <h2 className={cx('title')}>Work Experience</h2>
                 <div className={cx('control')}>
                     <span
                         className={cx('l-arrow')}
@@ -57,4 +57,4 @@ function Exprerience() {
     );
 }
 
-export default Exprerience;
+export default Experience;
