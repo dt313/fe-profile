@@ -9,7 +9,7 @@ const skills = [
     },
     {
         time: '2025 ~ future',
-        title: 'unKnow',
+        title: 'Software Developer',
         tags: ['developer', 'Korean'],
         description: 'Software Engineer at FPT Korea, working on backend and software development.',
     },
